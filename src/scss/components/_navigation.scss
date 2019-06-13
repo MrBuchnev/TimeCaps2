@@ -1,0 +1,176 @@
+.navigation {
+    position: fixed;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background-color: $color-primary;
+    top: 2rem;
+    width: 100vw;
+    transform: translateY(0);
+    transition: 0.1s all ease-out;
+
+    &--hidden {
+        transform: translateY(-10rem);
+
+        & .navigation__nav {
+            display: none;
+        }
+    }
+
+    &__logo-container {
+        position: absolute;
+        left: 2rem;
+    }
+
+    &__logo {
+        height: 60px;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    // the button behind the hamburger
+    &__button {
+        background-color: transparent;
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        right: 4rem;
+        border-radius: 50%;
+        z-index: 200;
+        text-align: center;
+        cursor: pointer;
+        transition: all .1s linear;
+
+        @include respond(phone) {
+            right: 3.5rem;
+        }
+    }
+
+    &__nav {
+        width: 300px;
+        position: fixed;
+        top: -28rem;
+        right: 3rem;
+        z-index: 150;
+        opacity: 0;
+        background-color: inherit;
+
+        @include respond(phone) {
+            width: unset;
+            max-width: 300px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        text-align: right;
+        margin-top: 7rem;
+        padding-left: 0;
+    }
+
+    &__item {
+        &:hover,
+        &:active {
+            background-color: $color-highlight;
+        }
+
+        & img {
+            height: 25px;
+            padding: 0 1rem;
+        }
+
+        &--ios {
+            margin-top: 1rem;
+            background-color: $color-secondary;
+        }
+
+        &--android {
+            background-color: $color-tertiary;
+        }
+
+        &--ios,
+        &--android {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover,
+            &:active {
+                background-color: $color-white;
+
+                & a {
+                    color: $color-primary;
+                }
+            }
+
+            & a {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 1rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+    }
+
+    // opening the navigation menu functionality
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        top: 0;
+        box-shadow: 0 1rem 3rem rgba($color-black, .5);
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 1rem;
+        width: 3rem;
+        height: 2px;
+        display: inline-block;
+        background-color: $color-secondary;
+        transition: all .1s linear;
+
+        &::after {
+            width: 2rem;
+            height: 2px;
+            background-color: $color-secondary;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        top: 0;
+        transform: rotate(45deg);
+        background-color: $color-white;
+        transition: all .1s linear;
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        width: 3rem;
+        transform: rotate(-90deg);
+        background-color: $color-white;
+        transition: all .1s linear;
+    }
+}

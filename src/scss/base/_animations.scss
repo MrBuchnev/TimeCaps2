@@ -1,0 +1,17 @@
+@keyframes vertical-movement {
+    0%, 100% {
+        transform: translateY(-2rem);
+    }
+    50% {
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes shadow-size-change {
+    0%, 100% {
+        transform: scaleX(.8);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+} 

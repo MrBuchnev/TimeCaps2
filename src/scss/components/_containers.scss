@@ -1,0 +1,43 @@
+.shifted {
+    border-left: 1px solid rgba($color-white, .1);
+    transform: translateX(5.5rem);
+    height: 100%;
+
+    @include respond(phone) {
+        border: none;
+        transform: translateX(0);
+    }
+}
+
+.unshifted {
+    transform: translateX(-5.5rem);
+    padding-left: 5rem;
+
+    @include respond(tab-land) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include respond(tab-port) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @include respond(phone) {
+        transform: translateX(0);
+    }
+}
+
+.responsive-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+    @include respond(tab-land) {
+        max-width: 1000px;
+    }
+
+    @include respond(phone) {
+        max-width: 600px;
+    }
+}

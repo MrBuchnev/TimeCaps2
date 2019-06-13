@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>TimeCaps</title>
+        <link rel="icon" href="src/img/rectangular.png">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/flickity/dist/flickity.min.css" media="screen">
+        <link rel="stylesheet" href="node_modules/flickity-fade/flickity-fade.css">
+        <link rel="stylesheet" href="src/css/style.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <a class="navigation__logo-container" href="#">
+                <img class="navigation__logo" src="src/img/logo.png" />
+            </a>
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Help & Support</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Cookie policy</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Privacy Policy</a>
+                    </li>
+                    <li class="navigation__item navigation__item--ios">
+                        <img src="src/img/apple.png" />
+                        <a href="#" class="navigation__link">Download iOs</a>
+                    </li>
+                    <li class="navigation__item navigation__item--android">
+                        <img src="src/img/android.png" />
+                        <a href="#" class="navigation__link">Download Android</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="shifted">
+            <div class="unshifted responsive-container">
+                <div class="capsule">
+                    <div class="row">
+                        <div class="capsule__images col">
+                            <div class="capsule__image-container">
+                                <img class="capsule__image capsule__image--main" src="src/img/capsule.png" />
+                                <div class="capsule__countdown">
+                                    <span id="timer-days"></span>
+                                    <span id="timer-hours"></span>
+                                    <span id="timer-mins"></span>
+                                    <span id="timer-secs"></span>
+                                </div>
+                                <!-- <countdown class="capsule__countdown" :time="50 * 18 * 60 * 60 * 1000">
+                                    <template slot-scope="props">{{ props.days }}d : {{ props.hours }}h : {{ props.minutes }}m : {{ props.seconds }}s</template>
+                                </countdown> -->
+                            </div>
+                            <img class="capsule__image capsule__image--rect1" src="src/img/rectangular.png" />
+                            <img class="capsule__image capsule__image--rect2" src="src/img/rectangular.png" />
+                            <img class="capsule__image capsule__image--rect3" src="src/img/rectangular.png" />
+                            <div class="capsule__image capsule__image--shadow"></div>
+                        </div>
+                        <div class="capsule__description">
+                            <h1>
+                                The concept of Timecaps is simple and elegant
+                            </h1>
+                            <h3>
+                                TimeCaps is a free video app that allows you to create a time capsule, a video message that you
+                                send to any of your phone contacts to be unlocked on a date decided by you.
+                            </h3>
+                            <div class="row">
+                                <div class="capsule__paragraph col">
+                                    <p class="capsule__number">01</p>
+                                    <p class="capsule__text">
+                                        TimeCaps is a new type of social media app. It build excitement and anticipation
+                                        around the unlocking of a future moment, rather than giving users instant gratification.
+                                        You can send messages to one person, a group or to yourself.
+                                    </p>
+                                </div>
+                                <div class="capsule__paragraph col">
+                                    <p class="capsule__number">02</p>
+                                    <p class="capsule__text">
+                                        When you send a video time capsule, the recipient sees a notification with a single image
+                                        from the video. He or she will wonder what you have said in your message but will have to
+                                        wait - from five minutes to 50 years!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="motto">
+                    <div class="row">
+                        <div class="motto__column">
+                            <h2>
+                                The possibilities of the content you send are endless - from heartfelt messages
+                                to predictions and motivational messages. It's fun. It's meaningful. It's uplifting.
+                            </h2>
+                        </div>
+                        <div class="motto__slider">
+                            <div class="carousel-cell">
+                                <img src="src/img/profile-1.jpg">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="src/img/profile-2.jpg">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="src/img/profile-3.jpg">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="src/img/profile-4.jpg">
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="src/img/profile-5.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="howto">
+                    <div class="row">
+                        <div class="howto__heading">
+                            <h1>
+                                How to create a time capsule with your TimeCaps Mobile App:
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="howto__container col">
+                            <div class="howto__images">
+                                <img class="howto__circle" src="src/img/circle.png" alt="">
+                                <img class="howto__phone" src="src/img/phone.png" alt="">
+                            </div>
+                            <div class="howto__slider">
+                                <div class="carousel-cell">
+                                    <div class="cell-contents">
+                                        <div class="image-container">
+                                            <img src="src/img/slider-pic-1.jpg" alt="picture">
+                                        </div>
+                                        <div class="step-info">
+                                            <h3>Step 1</h3>
+                                            <p>
+                                                This is the instructions for step 1. This is the instructions for step 1. This is the instructions for step 1.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="cell-contents">
+                                        <div class="image-container">
+                                            <img src="src/img/slider-pic-2.jpg" alt="picture">
+                                        </div>
+                                        <div class="step-info">
+                                            <h3>Step 2</h3>
+                                            <p>
+                                                This is the instructions for step 2. This is the instructions for step 2. This is the instructions for step 2.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="cell-contents">
+                                        <div class="image-container">
+                                            <img src="src/img/slider-pic-3.jpg" alt="picture">
+                                        </div>
+                                        <div class="step-info">
+                                            <h3>Step 3</h3>
+                                            <p>
+                                                This is the instructions for step 3. This is the instructions for step 3. This is the instructions for step 3.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="cell-contents">
+                                        <div class="image-container">
+                                            <img src="src/img/slider-pic-4.jpg" alt="picture">
+                                        </div>
+                                        <div class="step-info">
+                                            <h3>Step 4</h3>
+                                            <p>
+                                                This is the instructions for step 4. This is the instructions for step 4. This is the instructions for step 4.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="cell-contents">
+                                        <div class="image-container">
+                                            <img src="src/img/slider-pic-5.jpg" alt="picture">
+                                        </div>
+                                        <div class="step-info">
+                                            <h3>Step 5</h3>
+                                            <p>
+                                                This is the instructions for step 5. This is the instructions for step 5. This is the instructions for step 5.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="cell-contents">
+                                        <div class="image-container">
+                                            <img src="src/img/slider-pic-6.jpg" alt="picture">
+                                        </div>
+                                        <div class="step-info">
+                                            <h3>Step 6</h3>
+                                            <p>
+                                                This is the instructions for step 6. This is the instructions for step 6. This is the instructions for step 6.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="row">
+                        <div class="footer__images col">
+                            <a href="#">
+                                <img src="src/img/googleplay.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="src/img/appstore.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__description col">
+                            <h1>
+                                Download the app today!
+                            </h1>
+                            <p>
+                                IOS users can download the TimeCaps app free of charge from
+                                the App Store. It can be downloaded in English in all countries
+                                with access to the App Store.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
+        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+        <script type="text/javascript" src="node_modules/flickity-fade/flickity-fade.js"></script>
+        <script type="text/javascript" src="src/js/navigation.js"></script>
+        <script type="text/javascript" src="src/js/countdown.js"></script>
+        <script type="text/javascript" src="src/js/flickity.js"></script>
+    </body>
+</html>

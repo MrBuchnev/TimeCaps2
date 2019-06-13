@@ -1,0 +1,169 @@
+.capsule {
+    padding-top: 10rem;
+    color: $color-white;
+    padding-bottom: 5rem;
+
+    @include respond(phone) {
+        padding-bottom: 2rem;
+    }
+
+    &__images {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+
+        @include respond(tab-land) {
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
+        }
+
+        @include respond(tab-port) {
+            margin-left: 8.333333%;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+
+        @include respond(phone) {
+            margin-left: 25%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__countdown {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 51%;
+        text-align: center;
+        z-index: 1;
+        font-size: .7rem;
+        animation: vertical-movement 20s ease-in-out infinite;
+
+        @include respond(tab-port) {
+            font-size: .6rem;
+        }
+    }
+
+    &__image {
+        &--main {
+            width: 100%;
+            animation: vertical-movement 20s ease-in-out infinite;
+        }
+
+        &--rect1,
+        &--rect2,
+        &--rect3 {
+            position: absolute;
+            z-index: -1;
+        }
+
+        &--rect1 {
+            width: 2rem;
+            top: 22rem;
+            left: -2rem;
+            animation: vertical-movement 10s ease-in-out infinite;
+
+            @include respond(tab-port) {
+                top: 12rem;
+            }
+        }
+
+        &--rect2 {
+            width: 8rem;
+            top: 31rem;
+            left: -1rem;
+            animation: vertical-movement 6s ease-in-out infinite;
+
+            @include respond(tab-port) {
+                top: 21rem;
+            }
+        }
+
+        &--rect3 {
+            width: 6rem;
+            top: 17rem;
+            right: -3rem;
+            transform: rotate(180deg);
+            animation: vertical-movement 8s infinite;
+
+            @include respond(tab-land) {
+                top: 15rem;
+            }
+
+            @include respond(tab-port) {
+                top: 12rem;
+            }
+        }
+
+        &--shadow {
+            width: 80%;
+            margin: 0 auto;
+            height: 30px;
+            background: radial-gradient($color-black 0%, transparent 70%, transparent 100%);
+            border-radius: 50%;
+            margin-top: 40px;
+            animation: shadow-size-change 20s ease-in-out infinite;
+        }
+    }
+
+    &__description {
+        padding-right: 1rem;
+        margin-left: 8.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+        z-index: 10;
+
+        @include respond(tab-land) {
+            margin-left: 8.333333%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @include respond(tab-port) {
+
+        }
+
+        @include respond(phone) {
+            margin-top: -8rem;
+            margin-left: 8.333333%;
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+        }
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__subheading {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    &__paragraph {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 3rem;
+
+        @include respond(tab-land) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__number {
+        font-weight: 600;
+        letter-spacing: 3px;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+        color: $color-secondary;
+    }
+}

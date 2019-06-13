@@ -1,0 +1,55 @@
+.motto {
+    margin-bottom: 8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include respond(phone) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+
+        @include respond(phone) {
+            margin-left: 8.333333%;
+            margin-bottom: 4rem;
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+        }
+    }
+
+    &__slider {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+
+        @include respond(phone) {
+            margin-left: 8.333333%;
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+        }
+    }
+
+    .flickity-viewport {
+        & .carousel-cell {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            margin-left: 3rem;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+
+            @include respond(phone) {
+                margin-left: 2rem;
+            }
+
+            & img {
+                height: 100%;
+            }
+        }
+    }
+}

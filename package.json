@@ -1,0 +1,25 @@
+{
+  "name": "tecco_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass src/scss/main.scss src/css/style.css -w"
+  },
+  "author": "Andrey Buchnev",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
+    "sass-loader": "^7.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "flickity": "^2.2.0",
+    "flickity-fade": "^1.0.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}
