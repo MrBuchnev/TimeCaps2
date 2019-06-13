@@ -5,7 +5,7 @@ $('.motto__slider').flickity({
     wrapAround: true,
     draggable: false,
     cellAlign: 'left',
-    // autoPlay: 2000,
+    autoPlay: 2000,
 });
 
 $('.howto__slider').flickity({
